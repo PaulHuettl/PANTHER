@@ -9,11 +9,11 @@ from __future__ import print_function
 
 import argparse
 from torch.utils.data import DataLoader
-from wsi_datasets import WSIProtoDataset
-from utils.utils import seed_torch, read_splits
-from utils.file_utils import save_pkl
-from mil_models import prepare_emb
-from mil_models import PrototypeTokenizer
+from panther.wsi_datasets import WSIProtoDataset
+from panther.utils.utils import seed_torch, read_splits
+from panther.utils.file_utils import save_pkl
+from panther.mil_models import prepare_emb
+from panther.mil_models import PrototypeTokenizer
 
 import numpy as np
 

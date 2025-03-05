@@ -1,14 +1,16 @@
 import os
-from mil_models import (ABMIL, PANTHER, OT, H2T, ProtoCount, LinearEmb, IndivMLPEmb)
+# from panther.mil_models import (ABMIL, PANTHER, OT, H2T, ProtoCount, LinearEmb, IndivMLPEmb)
+from panther.mil_models import PANTHER
 
-from mil_models import (ABMILConfig, LinearEmbConfig, PANTHERConfig, OTConfig, ProtoCountConfig, H2TConfig)
-from mil_models import (IndivMLPEmbConfig_Shared, IndivMLPEmbConfig_Indiv, 
-                        IndivMLPEmbConfig_SharedPost, IndivMLPEmbConfig_IndivPost, 
-                        IndivMLPEmbConfig_SharedIndiv, IndivMLPEmbConfig_SharedIndivPost)
+# from panther.mil_models import (ABMILConfig, LinearEmbConfig, PANTHERConfig, OTConfig, ProtoCountConfig, H2TConfig)
+# from panther.mil_models import PANTHERConfig
+# from panther.mil_models import (IndivMLPEmbConfig_Shared, IndivMLPEmbConfig_Indiv, 
+#                         IndivMLPEmbConfig_SharedPost, IndivMLPEmbConfig_IndivPost, 
+#                         IndivMLPEmbConfig_SharedIndiv, IndivMLPEmbConfig_SharedIndivPost)
 
 import pdb
 import torch
-from utils.file_utils import save_pkl, load_pkl
+from panther.utils.file_utils import save_pkl, load_pkl
 from os.path import join as j_
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 

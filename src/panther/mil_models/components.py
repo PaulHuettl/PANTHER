@@ -2,7 +2,7 @@ import torch.nn as nn
 import torch
 from tqdm import tqdm
 
-from utils.losses import NLLSurvLoss, CoxLoss, SurvRankingLoss
+from panther.utils.losses import NLLSurvLoss, CoxLoss, SurvRankingLoss
 from sksurv.util import Surv
 
 def create_mlp(in_dim=None, hid_dims=[], act=nn.ReLU(), dropout=0.,
@@ -57,7 +57,6 @@ def predict_emb(self, dataset, use_cuda=True, permute=False):
     """
 
     X = []
-
     for i in tqdm(range(len(dataset))):
         batch = dataset.__getitem__(i)
         data = batch['img'].unsqueeze(dim=0)
@@ -71,7 +70,6 @@ def predict_emb(self, dataset, use_cuda=True, permute=False):
         X.append(out)
 
     X = torch.cat(X)
-
     return X
 
 def predict_clf(self, dataset, use_cuda=True, permute=False):
